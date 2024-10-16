@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+
+	<title>Eduardo Arce| Systems Engineer | angeleaduardosao@outlook.com</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Esto es para que la escala en celulares, se ajuste-->
+
+
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+
+	<link rel="stylesheet" type="text/css"
+		href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="resume.css" media="all" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+	<style>
+		/*Estilos algo bien*/
+		body {
+			font-family: Arial, sans-serif;
+			padding: 20px;
+		}
+
+		.contact-info h3 {
+			margin: 0;
+		}
+
+
+		.project-img {
+			width: 200px;
+			height: autopx;
+			border-radius: 10%;
+			display: block;
+			margin: 0 auto;
+		}
+	</style>
+
+
+</head>
+
+<body>
+
+	<div id="doc2" class="yui-t7">
+		<div id="inner">
+
+			<div id="hd">
+				<div class="yui-gc">
+					<div class="yui-u first">
+						<h1>Eduardo Arce</h1>
+						<h2>Systems Engineer</h2>
+					</div>
+
+					<div class="yui-u">
+						<div class="contact-info">
+							<h3>
+								<a id="pdf" href="#" download class="download-btn">Download PDF</a>
+							</h3>
+							<h3><a href="https://www.linkedin.com/in/eduardo-arce-076702298/">Linkedin_Eduardo_Arce </a>
+							</h3>
+							<h3>(+52) 662-349-1316</h3>
+						</div><!--// .contact-info -->
+					</div>
+				</div><!--// .yui-gc -->
+			</div><!--// hd -->
+
+
+			<div id="bd">
+				<div id="yui-main">
+					<div class="yui-b">
+
+						<div class="yui-gf">
+							<div class="yui-u first">
+								<h2> Profile </h2>
+								<img src="Imagencv.jpg" alt="Foto de Eduardo Arce"
+									style="width: 170px; height: 170px; border-radius: 50%; float: left; margin-right: 15px; margin-left: -45px;">
+							</div>
+							<div class="yui-u">
+								<p class="enlarge">
+									Soy un estudiante de Ingeniería en Sistemas de Información con interés en el área de
+									backend. A lo largo de mi estadía académica, he fortalecido mis conocimientos en
+									arquitectura de software, bases de datos y programación en lenguajes como Java, SQL,
+									PHP, JS etc. Me considero una persona analítica, capaz de resolver distintas tareas
+									y problemas de programación. Estoy interesado en seguir creciendo personalmente en
+									el desarrollo de sistemas y contribuir a proyectos innovadores que permitan mejorar
+									la eficiencia y escalabilidad de aplicaciones y sistemas.
+								</p>
+
+							</div>
+						</div><!--// .yui-gf -->
+
+						<script>
+
+							document.getElementById('pdf').addEventListener('click', function (event) {
+								event.preventDefault(); // Evita la acción por defecto del enlace
+
+								const { jsPDF } = window.jspdf; // Acceder a jsPDF desde el entorno global
+
+								html2canvas(document.body, { scale: 2 }).then((canvas) => {
+									const imgData = canvas.toDataURL('image/png');
+									const pdf = new jsPDF('p', 'mm', 'a4');
+
+									// Calcula el tamaño de la imagen para ajustarla al PDF
+									const pdfWidth = pdf.internal.pageSize.getWidth();
+									const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+
+									pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+									pdf.save('CV_Arce'); // Descarga el archivo
+								});
+							});
+
+
+
+						</script>
+
+						<div class="yui-gf">
+							<div class="yui-u first">
+								<h2>Habilidades blandas</h2>
+							</div>
+							<div class="yui-u">
+
+								<div class="talent">
+									<h2>Pensamiento crítico</h2>
+									<p>Capacidad para analizar problemas complejos y proponer soluciones que ayuden a
+										resolver distintos conflictos. </p>
+								</div>
+
+								<div class="talent">
+									<h2>Trabajo en equipo</h2>
+									<p>Experiencia en proyectos académicos en equipo, desarrollando habilidades de
+										comunicación, unión y apoyo.</p>
+								</div>
+
+								<div class="talent">
+									<h2>Dirección de proyectos</h2>
+									<p>Capacidad de coordinar y motivar a un equipo. Manejar problemas que surgen dentro
+										del equipo o proyecto.</p>
+								</div>
+							</div>
+						</div><!--// .yui-gf -->
+
+						<div class="yui-gf">
+							<div class="yui-u first">
+								<h2>Habilidades Tecnicas</h2>
+							</div>
+							<div class="yui-u">
+								<ul class="talent">
+									<li>XHTML</li>
+									<li>CSS</li>
+									<li>Javascript</li>
+									<li>Java</li>
+									<li class="last">PHP</li>
+								</ul>
+
+								<ul class="talent">
+									<li> JSON </li>
+									<li> XML DOM </li>
+									<li class="last">CVS / Parsing HTML</li>
+								</ul>
+
+								<ul class="talent">
+									<li>Windows 7/10/11</li>
+								</ul>
+							</div>
+						</div><!--// .yui-gf-->
+
+						<div class="yui-gf">
+
+							<div class="yui-u first">
+								<h2>Experiencia académica</h2>
+							</div><!--// .yui-u -->
+
+							<div class="yui-u">
+
+								<div class="job">
+									<h2>Pokepedia</h2>
+									<h3>Uso de la PokeApi</h3>
+									<h4>2023</h4>
+									<p>Aplicación en java, interactiva que utiliza la PokeApi para mostrar información
+										detallada sobre diferentes Pokémon. Implementé la integración con la API y
+										desarrollé funcionalidades como búsqueda avanzada y filtrado por tipos,
+										habilidades y estadísticas.</p>
+
+									<img src="pokedex.jpg" alt="Juego"
+										style="display: block; width: 200px; height: auto; border-radius: 10%; margin: 0 auto;"
+										class="project-img">
+
+								</div>
+
+								<div class="job">
+									<h2>Breakout Game</h2>
+									<h3>Proyecto colaborativo</h3>
+									<h4>2023</h4>
+									<p>Desarrollo de un videojuego arcade muy conocido, contribuyendo en la programación
+										de la física de colisiones y diseño de niveles. Trabajo en equipo para
+										implementar mecánicas de juego y pruebas de usuario para asegurar una
+										experiencia fluida y divertida.</p>
+
+									<img src="Breakout.jpg" alt="Juego"
+										style="display: block; width: 200px; height: auto; border-radius: 10%; margin: 0 auto;"
+										class="project-img">
+								</div>
+
+								<div class="job">
+									<h2>Agenda interactiva</h2>
+									<h3>Proyecto colaborativo</h3>
+									<h4>2022</h4>
+									<p> Desarrollo de una agenda digital que permite a los usuarios almacenar
+										información básica sobre sus contactos. Además, incluye funcionalidades de
+										edición de texto, lo que facilita la organización y personalización de la
+										información. </p>
+									<img src="Agenda.jpg" alt="Juego"
+										style="display: block; width: 200px; height: auto; border-radius: 10%; margin: 0 auto;"
+										class="project-img">
+								</div>
+
+
+								<div class="job last">
+									<h2>Proyecto escolar- Juego en Java</h2>
+									<h3>After the journey</h3>
+									<h4>2022</h4>
+									<p>Diseño de un juego educativo, interactivo destinado a enseñar a niños los
+										elementos de la tabla periódica. Diseño de mecánicas de recolección de ítems que
+										permiten a los jugadores identificar símbolos químicos y responder preguntas
+										sobre los elementos correspondientes. Fomenté el aprendizaje divertido y
+										dinámico, mejorando la comprensión de conceptos científicos básicos entre los
+										participantes.
+
+									</p>
+									<img src="Juego1.jpg" alt="Juego"
+										style="display: block; width: 200px; height: auto; border-radius: 10%; margin: 0 auto;"
+										class="project-img">
+
+								</div>
+
+							</div><!--// .yui-u -->
+						</div><!--// .yui-gf -->
+
+
+						<div class="yui-gf last">
+							<div class="yui-u first">
+								<h2>Educación</h2>
+							</div>
+							<div class="yui-u">
+								<h2 style="text-align: justify;">Universidad de Sonora - Hermosillo, México</h2>
+								<h3 style="text-align: justify;">Ingeniería en sistemas de información 2022 - present
+									<strong></strong>
+								</h3>
+
+								<br>
+
+								<h4 style="text-align: justify;">Centro de Bachillero Tecnológico Industrial y de
+									Servicios 132 - Hermosillo, México</h4>
+								<h5 style="text-align: justify;">Laboratorista Químico 2019- 2022 <strong></strong></h5>
+
+
+								<br>
+
+								<h3>Video de presentación</h3>
+
+								<video controls style="width: 100%; max-width: 600px; margin: 20px auto; display: block; border: 2px solid #ccc; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+									<source src="ruta-del-video.mp4" type="video/mp4">
+									<source src="videocv.mp4" type="video/mp4">
+									Tu navegador no soporta la reproducción de videos.
+								</video>
+
+
+							</div>
+						</div><!--// .yui-gf -->
+
+
+					</div><!--// .yui-b -->
+				</div><!--// yui-main -->
+			</div><!--// bd -->
+
+			<div id="ft">
+
+				<p>Angel Eduardo Arce Gaxiola &mdash; <a
+						href="https://www.facebook.com/eduardo.arce.9047506">Facebook</a> <a href=""></a> - <a
+						href="https://x.com/EduardoArceG">Twitter</a> &mdash; (+52) 662-349-1316 </p>
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+</body>
+
+</html>
